@@ -1,13 +1,13 @@
-package ech.microservice.k8s.shoppingapplication;
+package ech.microservice.k8s.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ShoppingApplication {
+public class ProductApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ShoppingApplication.class, args);
+		SpringApplication.run(ProductApplication.class, args);
 	}
 
 }

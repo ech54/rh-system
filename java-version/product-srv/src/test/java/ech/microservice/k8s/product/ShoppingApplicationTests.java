@@ -1,10 +1,10 @@
-package ech.microservice.k8s.shoppingapplication;
+package ech.microservice.k8s.product;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ShoppingApplicationTests {
+class ProductTests {
 
 	@Test
 	void contextLoads() {
