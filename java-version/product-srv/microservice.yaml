@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: product-srv
+  name: product-srv
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: product-srv
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: product-srv
+    spec:
+      containers:
+        - image: localhost:5001/local/product-srv:latest
+          name: product-srv
+          ports:
+            - containerPort: 8080
+          resources: {}
+status: {}
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    run: product-srv
+  name: product-srv
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    run: product-srv
+  type: LoadBalancer
+status:
+  loadBalancer: {}
